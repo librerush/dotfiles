@@ -1,0 +1,4 @@
+set selection-clipboard clipboard
+set recolor
+map <C-i> recolor
+
