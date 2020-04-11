@@ -17,6 +17,13 @@
 (eval-when-compile
   (require 'use-package))
 
+(put 'use-package 'lisp-indent-function 1)
+
+(use-package gcmh
+  :ensure t
+  :init
+  (gcmh-mode 1))
+
 (use-package tool-bar
   :config
   (tool-bar-mode -1))
@@ -45,6 +52,12 @@
   :config
   (column-number-mode t)
   (line-number-mode t))
+
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (setq auto-package-update-interval 5))
 
 (use-package zenburn-theme
   :ensure t
