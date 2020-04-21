@@ -64,10 +64,17 @@
   :config
   (load-theme 'zenburn t))
 
+(use-package moe-theme
+  :ensure t)
+
+(use-package flucui-themes
+  :ensure t)
+
 (use-package rainbow-delimiters
   :ensure t
   :hook
-  (prog-mode . rainbow-delimiters-mode))
+  ((prog-mode . rainbow-delimiters-mode)
+   (geiser-repl-mode . rainbow-delimiters-mode)))
 
 (use-package smartparens
   :ensure t
@@ -148,6 +155,9 @@
   :ensure t)
 
 (use-package vuiet
+  :ensure t)
+
+(use-package typit
   :ensure t)
 
 ;;; init.el ends here
